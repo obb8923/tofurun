@@ -1,15 +1,18 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View ,Text as RNText } from 'react-native';
 import Right from '../../../assets/svgs/ChevronRight.svg';
+import { Background } from '../../shared/components/Background';
+import { Text } from '../../shared/components/Text';
 
 export function HomeScreen() {
   return (
-    <View className='flex-1 bg-green-500 justify-center items-center'>
+    <Background isStatusBarGap={true}>
       <Right width={48} height={48} color="white" />
-      <Text className='text-white text-xl mt-4 font-p'>Pretendard Regular</Text>
-      <Text className='text-white text-xl mt-4 font-p-semibold'>Pretendard SemiBold</Text>
-      <Text className='text-white text-xl mt-4 font-p-extrabold'>Pretendard ExtraBold</Text>
-      <Text className='text-white text-xl mt-4 font-p-black'>Pretendard Black</Text>
-    </View>
+      <RNText className='text-black text-xl mt-4'>Pretendard (none)</RNText>
+      <Text text='Pretendard Regular' type='regular' className='text-black text-xl mt-4'/>
+      <Text text='Pretendard SemiBold' type='semibold' className='text-black text-xl mt-4'/>
+      <Text text='Pretendard ExtraBold' type='extrabold' className='text-black text-xl mt-4'/>
+      <Text text='Pretendard Black' type='black' className='text-black text-xl mt-4'/>
+    </Background>
   );
 }
