@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'p': ['Pretendard-Regular'],
+        'p-regular': ['Pretendard-Regular'],
         'p-semibold': ['Pretendard-SemiBold'],
         'p-extrabold': ['Pretendard-ExtraBold'],
         'p-black': ['Pretendard-Black'],
