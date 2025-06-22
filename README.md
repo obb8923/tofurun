@@ -2,6 +2,63 @@
 
 이 프로젝트는 React Native 앱 개발을 빠르게 시작할 수 있도록 미리 설정된 템플릿입니다.
 
+## 🚀 시작하는 방법
+
+### 1. 의존성 설치
+```bash
+npm install
+```
+
+### 2. iOS 설정
+```bash
+cd ios
+pod install
+cd ..
+```
+
+### 3. 앱 실행
+```bash
+# iOS 실행
+npm run ios
+
+# Android 실행
+npm run android
+
+# 개발 서버 시작
+npm start
+```
+
+## 📱 앱 정보 변경하기
+
+### 앱 이름 변경
+1. **iOS**: `ios/tmp/Info.plist` 파일에서 `CFBundleDisplayName` 값 수정
+2. **Android**: `android/app/src/main/res/values/strings.xml` 파일에서 `app_name` 값 수정
+3. **앱 설정**: `app.json` 파일에서 `name` 값 수정
+
+### 패키지명 변경 (Android)
+1. **Android 폴더 구조 변경**:
+   ```bash
+   # 예: com.jeong.tmp → com.yourcompany.yourapp
+   cd android/app/src/main/java
+   mkdir -p com/yourcompany/yourapp
+   mv com/jeong/tmp/* com/yourcompany/yourapp/
+   rmdir com/jeong/tmp com/jeong
+   ```
+
+2. **파일 내 패키지명 수정**:
+   - `android/app/src/main/java/com/yourcompany/yourapp/MainActivity.kt`
+   - `android/app/src/main/java/com/yourcompany/yourapp/MainApplication.kt`
+   - `android/app/src/main/AndroidManifest.xml`
+   - `android/app/build.gradle`
+
+3. **앱 설정**: `app.json` 파일에서 `android.package` 값 수정
+
+### Bundle Identifier 변경 (iOS)
+1. **Xcode에서 변경**:
+   - Xcode로 `ios/tmp.xcworkspace` 열기
+   - 프로젝트 설정에서 Bundle Identifier 수정
+2. **또는 `ios/tmp/Info.plist`에서 `CFBundleIdentifier` 수정**
+
 ## 🚀 미리 설정된 기능들
 
 ### 1. 라우팅 (React Navigation)
@@ -61,35 +118,6 @@ src/
 assets/
 ├── fonts/           # 폰트 파일들
 └── svgs/            # SVG 아이콘들
-```
-
-## 🛠 설치 및 실행
-
-### 의존성 설치
-```bash
-npm install
-```
-
-### iOS 설정
-```bash
-cd ios
-pod install
-cd ..
-```
-
-### iOS 실행
-```bash
-npm run ios
-```
-
-### Android 실행
-```bash
-npm run android
-```
-
-### 개발 서버 시작
-```bash
-npm start
 ```
 
 ## 📱 현재 설정된 화면
