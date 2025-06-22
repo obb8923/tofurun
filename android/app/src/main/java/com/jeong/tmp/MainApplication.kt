@@ -1,4 +1,4 @@
-package com.tmp
+package com.jeong.tmp
 
 import android.app.Application
 import com.facebook.react.PackageList
@@ -35,4 +35,4 @@ class MainApplication : Application(), ReactApplication {
     super.onCreate()
     loadReactNative(this)
   }
-}
+} 
