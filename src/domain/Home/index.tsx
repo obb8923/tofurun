@@ -3,8 +3,11 @@ import { View, Text } from 'react-native';
 
 export function HomeScreen() {
   return (
-    <View style={{flex:1,backgroundColor:'green'}}>
-      <Text>Home Sc</Text>
+    <View className='flex-1 bg-green-500'>
+      <Text className='text-white'>Home Screen</Text>
+      <Text className='text-white'>Home Screen</Text>
+      <Text className='text-white'>Home Screen</Text>
+      <Text className='text-white'>Home Screen</Text>
     </View>
   );
 }
