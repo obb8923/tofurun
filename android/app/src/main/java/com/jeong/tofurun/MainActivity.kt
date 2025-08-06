@@ -1,4 +1,4 @@
-package com.jeong.tmp
+package com.jeong.tofurun
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

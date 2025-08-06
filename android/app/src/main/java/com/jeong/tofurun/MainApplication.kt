@@ -1,4 +1,4 @@
-package com.jeong.tmp
+package com.jeong.tofurun
 
 import android.app.Application
 import com.facebook.react.PackageList
